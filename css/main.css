@@ -65,6 +65,18 @@ p{
     height: 300px;
     object-fit: cover;
 }
+.formulario {
+    color: var(--secondary-color);
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.mb-3 {
+    max-width: 430px;
+    margin: 0 auto 40px auto;
+}
+
 /* Footer */
 .footer {
     background-color: var(--hgColor); /* negro elegante */
