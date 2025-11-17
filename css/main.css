@@ -3,16 +3,48 @@ html{
     --hgColor:#0D0D0D;
     --primary-color: #6C63FF;
     --secondary-color: #3A86FF;
+    --textFont: "Nunito Sans", sans-serif;
+    --titlesFont: "Libre Caslon Text", serif;
+}
+
+/* Logotipo*/
+.logo-nav {
+    height: 80px;
+}
+
+/* Navbar fondo */
+.navbar {
+    background-color:var(--hgColor) !important; /* Negro elegante */
+}
+
+/* Enlaces */
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+    color:var(--primary-color) !important; /* Morado */
+}
+
+/* Ícono del carrito */
+.navbar .bi {
+    font-size: 15px;
+    margin-right: 5px;
 }
 
 
-
-
-h1, h3{
+h1, h2, h3, h4, h5{
     font-weight: bold;
     margin-top: 15px;
     margin-bottom: 20px;
     text-align: center;
+    font-family: var(--titlesFont);
+}
+p{
+    font-family: var(--textFont);
 }
 
 .oferta{
@@ -32,4 +64,19 @@ h1, h3{
 .card img {
     height: 300px;
     object-fit: cover;
+}
+/* Footer */
+.footer {
+    background-color: var(--hgColor); /* negro elegante */
+    color: white;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.footer-social a:hover {
+    color: var(--primary-color); /* morado */
 }
