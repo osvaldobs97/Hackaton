@@ -5,6 +5,11 @@ html{
     --secondary-color: #6c757d;
 }
 
+/* Logotipo*/
+.logo-nav {
+    height: 80px;
+}
+
 /* Navbar fondo */
 .navbar {
     background-color: #0D0D0D !important; /* Negro elegante */
@@ -14,7 +19,7 @@ html{
 .navbar .nav-link {
     color: white !important;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 12px;
 }
 
 /* Hover */
@@ -24,7 +29,7 @@ html{
 
 /* Ícono del carrito */
 .navbar .bi {
-    font-size: 20px;
+    font-size: 15px;
     margin-right: 5px;
 }
 
