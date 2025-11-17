@@ -1,0 +1,433 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tienda deportiva</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!--Barra de navegación-->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!--Logotipo-->
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/logotipo3.png" alt="Logo Deport" class="logo-nav">
+                </a>
+                <!--Botones móviles-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <!--Enlaces-->
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categorías</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ofertas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">¿Por qué nosotros?</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart3"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <h1>Eleva tu rendimiento con equipo deportivo de alto nivel</h1>
+
+    <!--Carrusel-->
+    <div id="carouselAutoplaying" class="carousel slide hero-carousel" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./assets/depor.jpg" class="d-block w-100" alt="corredor">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/depor2.jpg" class="d-block w-100" alt="corredor">
+            </div>
+            <div class="carousel-item">
+                <img src="./assets/tenis.jpg" class="d-block w-100" alt="tenista">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <h3>Encuentra ropa, calzado y accesorios diseñados para mejorar tu desempeño.</h3>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!--Cards Categorias-->
+    <div class=container>
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/ropaD.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Ropa Deportiva</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/sneaker.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Zapatillas Deportivas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/accesoriosD.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Accesorios</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/equipamentoD.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">Equipamento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Ofertas-->
+    <h3 class="text-center mb-4">Ofertas Exclusivas</h3>
+
+    <div  class="container d-flex justify-content-center">
+        <div class="p-4 shadow-sm rounded-4 " style="max-width: 800px; width: 100%;">
+
+            <h4 class="text-center mb-3">🔥 Descuentos del Buen Fin 🔥</h4>
+            <p class="text-center">Aprovecha promociones increíbles en nuestros productos destacados:</p>
+
+            <div class="d-flex justify-content-around mt-3">
+
+                <div class="text-center">
+                    <img src="./assets/tennis_nike_run.jpg" class="rounded mb-1 auto img-fluid oferta"
+                        alt="tenis nike run">
+                    <p class="mb-0">Tenis nike run</p>
+                    <span class="fw-bold">¡$899!</span>
+                </div>
+
+                <div class="text-center">
+                    <img src="./assets/puma_court.jpg" class="rounded mb-1 auto img-fluid oferta" alt="Puma court">
+                    <p class="mb-0">Tenis puma court</p>
+                    <span class="fw-bold">¡$780!</span>
+                </div>
+
+                <div class="text-center">
+                    <img src="./assets/tenis_on.jpg" class="rounded mb-1 auto img-fluid oferta" alt="Producto 1">
+                    <p class="mb-0">Tenis ON</p>
+                    <span class="fw-bold">¡$1062!</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <br>
+    <!--Productos favoritos-->
+    <h3 class="text-center mb-4">Productos favoritos</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/maleta_mujer.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+
+                        <h5 class="card-title">Maleta de entrenamiento</h5>
+                        <p class="card-text text-center">Maleta super comoda y espaciosa perfecta para llevar a tu
+                            entrenamiento.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/nike_confort.avif" class="card-img-top" alt="maleta nike">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Nike</h5>
+                        <p class="card-text text-center">Tenis Nike para correr, super cómodos. Tambien tenemos otros
+                            colores</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/tennis_nike_run.jpg" class="card-img-top" alt="tenis nike">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Nike run</h5>
+                        <p class="card-text text-center">Tenis Nike para correr distancias largas, muy cómodos.
+                            Disponibles en distintas tallas</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/termo.jpg" class="card-img-top" alt="termo">
+                    <div class="card-body">
+                        <h5 class="card-title">Termo Stanley</h5>
+                        <p class="card-text">Termo Stanley, mantiene las bebidas frías hasta por 12hrs.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Cards Productos Mujer-->
+
+    <h3 class="text-center mb-4">Mujer</h3>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+
+                    <img src="./assets/guantes_mujer.jpg" class="card-img-top" alt="guantes">
+                    <div class="card-body">
+                        <h5 class="card-title">Guantes</h5>
+                        <p class="card-text">Guantes para entrenamiento con carga pesada, ayuda a prevenir daño en las
+                            manos.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/puma_mujer.jpg" class="card-img-top" alt="tenis puma">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Puma</h5>
+                        <p class="card-text">Tenis Puma casuales marca puma tipo confort, super cómodos y de colores
+                            pasteles.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/leggins nike.jpg" class="card-img-top" alt="leggins">
+                    <div class="card-body">
+                        <h5 class="card-title">Leggins rosas</h5>
+                        <p class="card-text">leggins rosas Nike, resistentes para entrenamiento pesado y estiramiento.
+                        </p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/tennis_nike_run.jpg" class="card-img-top" alt="tenis nike">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Nike</h5>
+                        <p class="card-text">Tenis Nike super cómodos perfectos para salir a caminar o correr.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Cards Productos Hombre-->
+
+    <h3 class="text-center mb-4">Hombre</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/espinilleras_hombre.jpg" class="card-img-top" alt="Espinilleras">
+                    <div class="card-body">
+                        <h5 class="card-title">Espinilleras</h5>
+                        <p class="card-text">Espinilleras Adidas perfecto para entrenamientos de futbol.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/adidas_hoops.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Adidas</h5>
+                        <p class="card-text">Tenis Adidas Hoops, supér cómodos. Pocas tallas.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/empuñaduras.png" class="card-img-top" alt="Empuñaduras">
+                    <div class="card-body">
+                        <h5 class="card-title">Empuñaduras</h5>
+                        <p class="card-text">Empuñadoras perfectas para entrenamiento desde casa.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/jersey_adidas_titki.jpg" class="card-img-top" alt="Jersey Adidas">
+                    <div class="card-body">
+                        <h5 class="card-title">Jersey Adidas</h5>
+                        <p class="card-text">Jersey Adidas colaboración con Triki Trakes, cómoda y fresca.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Cards Productos Niños-->
+
+    <h3 class="text-center mb-4">Niños</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/mochila_coco.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Mochila Coco</h5>
+                        <p class="card-text">Mochila Coco de la marca Adidas.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/nike_lebron.jpg" class="card-img-top" alt="Tenis Nike Lebron">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Nike</h5>
+                        <p class="card-text">Tenis Nike colaboracion Lebron.</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/nike_dri-fit.jpg" class="card-img-top" alt="puma rebound">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalón Nike Dri-Fit</h5>
+                        <p class="card-text">Pantalón Nike Dri-Fit perfecto para entrenamientos fuera y dentro de casa.
+                        </p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="card" style="width: 18rem;">
+                    <img src="./assets/puma_rebound.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Tenis Adidas</h5>
+                        <p class="card-text">Tenis Adidas formato rebound</p>
+                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Porque elegirnos-->
+    <h3>¿Por qué elegirnos?</h3>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-sm">
+                <ul class="list-group">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--formulario-->
+    <h3>¿Te gustaría recibir ofertas personalizadas?</h3>
+    <form>
+        <div class="mb-3">
+            <label for="inputName" class="form-label">Nombre:</label>
+            <input type="text" class="form-control" id="inputName">
+        </div>
+        <div class="mb-3">
+            <label for="inputEmail1" class="form-label">Correo electronico:</label>
+            <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">No compatiremos tu información</div>
+        </div>
+        <div class="mb-3">
+            <label for="inputTel" class="form-label">Número telefonico:</label>
+            <input type="tel" class="form-control" id="inputTel">
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="check1">
+            <label class="form-check-label" for="check1">Acepto los terminos y condiciones</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+
+    <!--Footer-->
+    <footer class="footer text-center mt-5">
+        <div class="container py-4">
+
+            <!-- Redes sociales -->
+            <div class="footer-social mb-3">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+
+            <!-- Derechos -->
+            <p class="mb-0">© 2025 Deport. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
