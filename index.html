@@ -53,15 +53,37 @@
                             <a class="nav-link" href="#">¿Por qué nosotros?</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link" href="#" data-bs-toggle="offcanvas" data-bs-target="#carritoOffcanvas">
                                 <i class="bi bi-cart3"></i>
+                                Carrito (<span id="contadorCarrito">0</span>)
                             </a>
                         </li>
+
+
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
+    <!--offcanva Carrito-->
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carritoOffcanvas">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Tu carrito</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <ul id="listaCarrito" class="list-group mb-3"></ul>
+
+            <h5>Total: $<span id="totalCarrito">0</span></h5>
+            <button class="btn btn-success w-100 mt-3">Comprar</button>
+
+        </div>
+    </div>
+
+
 
     <h1>Eleva tu rendimiento con equipo deportivo de alto nivel</h1>
 
@@ -92,15 +114,11 @@
 
     <h3>Encuentra ropa, calzado y accesorios diseñados para mejorar tu desempeño.</h3>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-
     <!--Cards Categorias-->
     <div class=container>
         <div class="row">
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card-custom" style="width: 18rem;">
                     <img src="./assets/ropaD.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Ropa Deportiva</p>
@@ -108,7 +126,7 @@
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card-custom" style="width: 18rem;">
                     <img src="./assets/sneaker.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Zapatillas Deportivas</p>
@@ -116,7 +134,7 @@
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card-custom" style="width: 18rem;">
                     <img src="./assets/accesoriosD.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Accesorios</p>
@@ -124,7 +142,7 @@
                 </div>
             </div>
             <div class="col-sm">
-                <div class="card" style="width: 18rem;">
+                <div class="card-custom" style="width: 18rem;">
                     <img src="./assets/equipamentoD.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <p class="card-text">Equipamento</p>
@@ -137,7 +155,7 @@
     <!--Ofertas-->
     <h3 class="text-center mb-4">Ofertas Exclusivas</h3>
 
-    <div  class="container d-flex justify-content-center">
+    <div class="container d-flex justify-content-center">
         <div class="p-4 shadow-sm rounded-4 " style="max-width: 800px; width: 100%;">
 
             <h4 class="text-center mb-3">🔥 Descuentos del Buen Fin 🔥</h4>
@@ -176,14 +194,15 @@
         <div class="row">
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-                    <img src="./assets/maleta_mujer.jpg" class="card-img-top" alt="...">
+                    <img src="./assets/maleta_mujer.jpg" class="card-img-top" alt="maleta de entrenamiento">
                     <div class="card-body">
-
                         <h5 class="card-title">Maleta de entrenamiento</h5>
+                        <p class="text-center fw-semibold"><strong>$599 MXN</strong></p>
                         <p class="card-text text-center">Maleta super comoda y espaciosa perfecta para llevar a tu
                             entrenamiento.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
-
+                        <button class="btn btn-primary btn-add" data-id="1" data-nombre="maleta" data-precio="599">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -192,9 +211,12 @@
                     <img src="./assets/nike_confort.avif" class="card-img-top" alt="maleta nike">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Nike</h5>
+                        <p class="text-center fw-semibold"><strong>$999 MXN</strong></p>
                         <p class="card-text text-center">Tenis Nike para correr, super cómodos. Tambien tenemos otros
                             colores</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="2" data-nombre="Tenis Nike" data-precio="999">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -203,9 +225,13 @@
                     <img src="./assets/tennis_nike_run.jpg" class="card-img-top" alt="tenis nike">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Nike run</h5>
+                        <p class="text-center fw-semibold"><strong>$1,199 MXN</strong></p>
                         <p class="card-text text-center">Tenis Nike para correr distancias largas, muy cómodos.
                             Disponibles en distintas tallas</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="3" data-nombre="Tenis Nike Run"
+                            data-precio="1199">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -214,17 +240,17 @@
                     <img src="./assets/termo.jpg" class="card-img-top" alt="termo">
                     <div class="card-body">
                         <h5 class="card-title">Termo Stanley</h5>
+                        <p class="text-center fw-semibold"><strong>$349 MXN</strong></p>
                         <p class="card-text">Termo Stanley, mantiene las bebidas frías hasta por 12hrs.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="4" data-nombre="Termo" data-precio="349">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-
-D
 
     <!--Cards Productos Mujer-->
 
@@ -234,13 +260,15 @@ D
         <div class="row">
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-
                     <img src="./assets/guantes_mujer.jpg" class="card-img-top" alt="guantes">
                     <div class="card-body">
                         <h5 class="card-title">Guantes</h5>
+                        <p class="text-center fw-semibold"><strong>$299 MXN</strong></p>
                         <p class="card-text">Guantes para entrenamiento con carga pesada, ayuda a prevenir daño en las
                             manos.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="5" data-nombre="Guantes" data-precio="299">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -249,9 +277,12 @@ D
                     <img src="./assets/puma_mujer.jpg" class="card-img-top" alt="tenis puma">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Puma</h5>
+                        <p class="text-center fw-semibold"><strong>$799 MXN</strong></p>
                         <p class="card-text">Tenis Puma casuales marca puma tipo confort, super cómodos y de colores
                             pasteles.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="6" data-nombre="Tenis Puma" data-precio="799">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -260,9 +291,12 @@ D
                     <img src="./assets/leggins nike.jpg" class="card-img-top" alt="leggins">
                     <div class="card-body">
                         <h5 class="card-title">Leggins rosas</h5>
+                        <p class="text-center fw-semibold"><strong>$399 MXN</strong></p>
                         <p class="card-text">leggins rosas Nike, resistentes para entrenamiento pesado y estiramiento.
                         </p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="7" data-nombre="Leggin Rosa" data-precio="399">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -271,8 +305,12 @@ D
                     <img src="./assets/tennis_nike_run.jpg" class="card-img-top" alt="tenis nike">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Nike</h5>
+                        <p class="text-center fw-semibold"><strong>$1,599 MXN</strong></p>
                         <p class="card-text">Tenis Nike super cómodos perfectos para salir a caminar o correr.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="8" data-nombre="Tenis Nike Super"
+                            data-precio="1599">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -289,8 +327,12 @@ D
                     <img src="./assets/espinilleras_hombre.jpg" class="card-img-top" alt="Espinilleras">
                     <div class="card-body">
                         <h5 class="card-title">Espinilleras</h5>
+                        <p class="text-center fw-semibold"><strong>$299 MXN</strong></p>
                         <p class="card-text">Espinilleras Adidas perfecto para entrenamientos de futbol.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="9" data-nombre="Espinilleras"
+                            data-precio="299">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -299,8 +341,12 @@ D
                     <img src="./assets/adidas_hoops.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Adidas</h5>
+                        <p class="text-center fw-semibold"><strong>$1,299 MXN</strong></p>
                         <p class="card-text">Tenis Adidas Hoops, supér cómodos. Pocas tallas.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="10" data-nombre="Tenis Adidas Hoops"
+                            data-precio="1299">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -309,8 +355,11 @@ D
                     <img src="./assets/empuñaduras.png" class="card-img-top" alt="Empuñaduras">
                     <div class="card-body">
                         <h5 class="card-title">Empuñaduras</h5>
+                        <p class="text-center fw-semibold"><strong>$699 MXN</strong></p>
                         <p class="card-text">Empuñadoras perfectas para entrenamiento desde casa.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="11" data-nombre="Empuñadura" data-precio="699">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -319,8 +368,12 @@ D
                     <img src="./assets/jersey_adidas_titki.jpg" class="card-img-top" alt="Jersey Adidas">
                     <div class="card-body">
                         <h5 class="card-title">Jersey Adidas</h5>
+                        <p class="text-center fw-semibold"><strong>$999 MXN</strong></p>
                         <p class="card-text">Jersey Adidas colaboración con Triki Trakes, cómoda y fresca.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="12" data-nombre="Jersey Adidas"
+                            data-precio="999">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -337,8 +390,12 @@ D
                     <img src="./assets/mochila_coco.jpg" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">Mochila Coco</h5>
+                        <p class="text-center fw-semibold"><strong>$599 MXN</strong></p>
                         <p class="card-text">Mochila Coco de la marca Adidas.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="13" data-nombre="Mochila Coco"
+                            data-precio="599">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -347,8 +404,12 @@ D
                     <img src="./assets/nike_lebron.jpg" class="card-img-top" alt="Tenis Nike Lebron">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Nike</h5>
+                        <p class="text-center fw-semibold"><strong>$1,299 MXN</strong></p>
                         <p class="card-text">Tenis Nike colaboracion Lebron.</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="14" data-nombre="Tenis Lebron N"
+                            data-precio="1299">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -357,19 +418,27 @@ D
                     <img src="./assets/nike_dri-fit.jpg" class="card-img-top" alt="puma rebound">
                     <div class="card-body">
                         <h5 class="card-title">Pantalón Nike Dri-Fit</h5>
+                        <p class="text-center fw-semibold"><strong>$499 MXN</strong></p>
                         <p class="card-text">Pantalón Nike Dri-Fit perfecto para entrenamientos fuera y dentro de casa.
                         </p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="15" data-nombre="Pantalón Nike"
+                            data-precio="499">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="col-sm">
                 <div class="card" style="width: 18rem;">
-                    <img src="./assets/puma_rebound.jpg" class="card-img-top" alt="...">
+                    <img src="./assets/puma_rebound.jpg" class="card-img-top" alt="puma">
                     <div class="card-body">
                         <h5 class="card-title">Tenis Adidas</h5>
+                        <p class="text-center fw-semibold"><strong>$699 MXN</strong></p>
                         <p class="card-text">Tenis Adidas formato rebound</p>
-                        <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                        <button class="btn btn-primary btn-add" data-id="16" data-nombre="Adidas Rebound"
+                            data-precio="699">
+                            Agregar al carrito
+                        </button>
                     </div>
                 </div>
             </div>
@@ -377,107 +446,106 @@ D
     </div>
 
 
-   <!-- Porque elegirnos -->
-<section id="porque-elegirnos" class="py-5">
-    <div class="container">
-        <h3>¿Por qué elegir a DEPOT?</h3>
-        <div class="accordion" id="accordionPanelsStayOpenExample">
-            <!-- CALIDAD -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-                        aria-controls="panelsStayOpen-collapseOne">
-                        <strong>CALIDAD <i class="bi bi-award-fill"></i></strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        <strong>Mayor rendimiento.</strong> En cada uno de nuestros accesorios encontrarás materiales de alto
-                        rendimiento, durabilidad comprobada y un diseño pensado para atletas exigentes. Nos comprometemos a
-                        ofrecer productos que superen las expectativas y acompañen tu desempeño en cada entrenamiento y
-                        competencia.
-                    </div>
-                </div>
-            </div>
-
-            <!-- PRECIO -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseTwo">
-                        <strong>PRECIO <i class="bi bi-tags-fill"></i></strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <strong>Justo y de calidad.</strong> Creemos que la excelencia deportiva debe ser accesible. Por eso,
-                        ofrecemos precios competitivos sin sacrificar la calidad. Obtienes el equilibrio perfecto entre
-                        valor y rendimiento, con opciones para todos los presupuestos.
-                    </div>
-                </div>
-            </div>
-
-            <!-- RAPIDEZ -->
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-                        aria-controls="panelsStayOpen-collapseThree">
-                        <strong>RAPIDEZ <i class="bi bi-lightning-charge-fill"></i></strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        <strong>Velocidad hasta en la entrega.</strong> Sabemos que el tiempo importa. Contamos con un
-                        proceso de compra ágil y envíos rápidos para que disfrutes tus accesorios cuanto antes. Tu
-                        pedido llega a tus manos en tiempo récord, listo para ayudarte a alcanzar tus metas deportivas.
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Formulario -->
-        <div class="mt-5">
-            <h3 class="formulario">¿Deseas recibir ofertas solo para ti?</h3>
-            <strong>
-                <p>Descuentos, rebajas, promociones exclusivas… todo para ti.</p>
-            </strong>
-            <form>
-                <div class="mb-3">
-                    <label for="inputName" class="form-label">Nombre:</label>
-                    <input type="text" class="form-control" id="inputName" placeholder="Nombre completo">
-                </div>
-                <div class="mb-3">
-                    <label for="inputEmail1" class="form-label">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="inputEmail1" placeholder="ejemplo@correo.com">
-                    <div id="emailHelp" class="form-text">
-                        Esta información será utilizada exclusivamente para enviarte ofertas y promociones.
-                    </div>
-                </div>
-                <div class="mb-3">
-                    <label for="inputTel" class="form-label">Número telefónico:</label>
-                    <input type="tel" class="form-control" id="inputTel" placeholder="123-456-7890">
-                </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="check1">
-                    <label class="form-check-label" for="check1"></label>
-                    <div class="card w-75 mb-3">
-                        <div class="card-body">
-                            <h5 class="card-title">Acepto términos y condiciones</h5>
-                            <p class="card-text">
-                                Esto funciona como un contrato legal que regula el uso del servicio y protege tanto a la
-                                empresa como al usuario.
-                            </p>
+    <!-- Porque elegirnos -->
+    <section id="porque-elegirnos" class="py-5">
+        <div class="container">
+            <h3>¿Por qué elegir a DEPOT?</h3>
+            <div class="accordion" id="accordionPanelsStayOpenExample">
+                <!-- CALIDAD -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            <strong>CALIDAD <i class="bi bi-award-fill"></i></strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body">
+                            <strong>Mayor rendimiento.</strong> En cada uno de nuestros accesorios encontrarás
+                            materiales de alto
+                            rendimiento, durabilidad comprobada y un diseño pensado para atletas exigentes. Nos
+                            comprometemos a
+                            ofrecer productos que superen las expectativas y acompañen tu desempeño en cada
+                            entrenamiento y
+                            competencia.
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">DEPOT</button>
+
+                <!-- PRECIO -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            <strong>PRECIO <i class="bi bi-tags-fill"></i></strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Justo y de calidad.</strong> Creemos que la excelencia deportiva debe ser accesible.
+                            Por eso,
+                            ofrecemos precios competitivos sin sacrificar la calidad. Obtienes el equilibrio perfecto
+                            entre
+                            valor y rendimiento, con opciones para todos los presupuestos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RAPIDEZ -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            <strong>RAPIDEZ <i class="bi bi-lightning-charge-fill"></i></strong>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            <strong>Velocidad hasta en la entrega.</strong> Sabemos que el tiempo importa. Contamos con
+                            un
+                            proceso de compra ágil y envíos rápidos para que disfrutes tus accesorios cuanto antes. Tu
+                            pedido llega a tus manos en tiempo récord, listo para ayudarte a alcanzar tus metas
+                            deportivas.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="mt-5">
+                <h3 class="formulario">¿Deseas recibir ofertas solo para ti?</h3>
+                <strong>
+                    <p>Descuentos, rebajas, promociones exclusivas… todo para ti.</p>
+                </strong>
+                <form>
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Nombre:</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Nombre completo">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail1" class="form-label">Correo electrónico:</label>
+                        <input type="email" class="form-control" id="inputEmail1" placeholder="ejemplo@correo.com">
+                        <div id="emailHelp" class="form-text">
+                            Esta información será utilizada exclusivamente para enviarte ofertas y promociones.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputTel" class="form-label">Número telefónico:</label>
+                        <input type="tel" class="form-control" id="inputTel" placeholder="123-456-7890">
+                    </div>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="check1">
+                        <label class="form-check-label" for="check1"></label>
+                    </div>
+            </div>
+            <button type="submit" class="btn btn-primary">DEPOT</button>
             </form>
         </div>
-    </div>
-</section>
+        </div>
+    </section>
 
 
     <!--Footer-->
@@ -496,7 +564,10 @@ D
         </div>
     </footer>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
 </body>
 
 </html>

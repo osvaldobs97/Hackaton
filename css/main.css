@@ -7,6 +7,17 @@ html{
     --titlesFont: "Libre Caslon Text", serif;
 }
 
+h1, h2, h3, h4, h5{
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: var(--titlesFont);
+}
+p{
+    font-family: var(--textFont);
+}
+
 /* Logotipo*/
 .logo-nav {
     height: 80px;
@@ -35,26 +46,31 @@ html{
     margin-right: 5px;
 }
 
-
-h1, h2, h3, h4, h5{
-    font-weight: bold;
-    margin-top: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: var(--titlesFont);
-}
-p{
-    font-family: var(--textFont);
-}
-
 .oferta{
-   max-width: 200px; 
-   border-radius: 10px;
+    max-width: 200px; 
+    border-radius: 10px;
 }
 
 .hero-carousel .carousel-item img {
     height: 450px;   
     object-fit: cover; 
+}
+
+.card{
+    height: 550px;
+    border-radius:15px;
+    color: #F7F7F7;
+    background-color: var(--secondary-color);
+}
+
+.card-custom{
+    height: 500px;
+    font-family: var(--textFont);
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--secondary-color);
+    color: #F7F7F7;
+    border-radius: 5px;
 }
 
 .card:hover {
@@ -65,6 +81,7 @@ p{
     height: 300px;
     object-fit: cover;
 }
+
 .formulario {
     color: var(--secondary-color);
     margin-top: 40px;
@@ -92,3 +109,4 @@ p{
 .footer-social a:hover {
     color: var(--primary-color); /* morado */
 }
+
