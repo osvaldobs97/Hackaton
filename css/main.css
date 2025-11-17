@@ -1,0 +1,30 @@
+html{
+    --bgcolor:#f8f9fa;
+    --hgColor:#343a40;
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+}
+
+
+
+
+h1, h3{
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.hero-carousel .carousel-item img {
+    height: 450px;   
+    object-fit: cover; 
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: transform .3s ease;
+}
+.card img {
+    height: 300px;
+    object-fit: cover;
+}
