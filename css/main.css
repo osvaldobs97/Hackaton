@@ -5,7 +5,28 @@ html{
     --secondary-color: #6c757d;
 }
 
+/* Navbar fondo */
+.navbar {
+    background-color: #0D0D0D !important; /* Negro elegante */
+}
 
+/* Enlaces */
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+/* Hover */
+.navbar .nav-link:hover {
+    color: #6C63FF !important; /* Morado */
+}
+
+/* Ícono del carrito */
+.navbar .bi {
+    font-size: 20px;
+    margin-right: 5px;
+}
 
 
 h1, h3{
@@ -27,4 +48,20 @@ h1, h3{
 .card img {
     height: 300px;
     object-fit: cover;
+}
+
+/* Footer */
+.footer {
+    background-color: #0D0D0D; /* negro elegante */
+    color: white;
+}
+
+.footer-social a {
+    color: white;
+    font-size: 22px;
+    margin: 0 10px;
+}
+
+.footer-social a:hover {
+    color: #6C63FF; /* morado */
 }
