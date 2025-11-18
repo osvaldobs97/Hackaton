@@ -7,15 +7,20 @@ html{
     --titlesFont: "Libre Caslon Text", serif;
 }
 
+body{
+    background-color: #dbd9d9;
+}
+
 h1, h2, h3, h4, h5{
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 25px;
     margin-bottom: 20px;
     text-align: center;
     font-family: var(--titlesFont);
 }
 p{
     font-family: var(--textFont);
+    text-align: center;
 }
 
 /* Logotipo*/
@@ -60,33 +65,67 @@ p{
     height: 550px;
     border-radius:15px;
     color: #F7F7F7;
-    background-color: var(--secondary-color);
-}
-
-.card-custom{
-    height: 500px;
-    font-family: var(--textFont);
-    font-size: 20px;
-    text-align: center;
-    background-color: var(--secondary-color);
-    color: #F7F7F7;
-    border-radius: 5px;
+    background-color: #0D0D0D;
 }
 
 .card:hover {
     transform: scale(1.05);
     transition: transform .3s ease;
 }
+
 .card img {
     height: 300px;
     object-fit: cover;
 }
 
+.card-custom{
+    height: 500px;
+    font-family: var(--titlesFont);
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--hgColor);
+    color: #F7F7F7;
+    border-radius: 10px;
+}
+
+.card-custom:hover{
+    transform: scale(1.15);
+    transition: transform .3s ease;
+}
+
+button.btn-primary {
+    background-color: var(--primary-color);
+    border: none;
+}
+
+button.btn-primary:hover {
+    background-color: var(--secondary-color);
+}
+
+#boton-form {
+    display: block;
+    margin: 20px auto 20px auto; /* arriba 20px, auto a los lados */
+}
+
+.accordion-item {
+    background-color: var(--hgColor);
+    color: #F7F7F7;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.accordion-button:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
 .formulario {
-    color: var(--secondary-color);
     margin-top: 40px;
     margin-bottom: 10px;
-    text-align: center;
+    font-family: var(--textFont);
 }
 
 .mb-3 {
